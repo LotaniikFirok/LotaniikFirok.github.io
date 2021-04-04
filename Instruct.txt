@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 install node.js
 npm installer
+=======
+install node.js
+npm installer
+>>>>>>> 329f61c7645da41f5576335b354b2f626fe51dbc
 ==> Tone.js, SerialPort.io
