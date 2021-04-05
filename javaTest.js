@@ -8,6 +8,7 @@
     var bpmtest;
     var bpmMax;
     var bpmMin;
+    var octave;
     //Declare additional variables
     var hertzTest; //To be used in creating octaves from frequency
     var setValMax; //Max value decided for input sliders, range from setVal -> setValMax
@@ -31,6 +32,7 @@
         minHertz = 0;
         bpmMax = 240;
         bpmMin = 30;
+        octave = 2;
         play = [false, false, false, false, false, false, false, false, false, false];
         m_play = false
         edit = [true, false, false, false, false, false, false, false, false, false];
@@ -135,8 +137,8 @@
         if (finger == pointer){
             //Adjusts Hz of the output oscillator
                 //Declare min/max in hertz
-                hertzTest = ((24)*(setVal/setValMax))+28;
-                hertz = (2**((hertzTest.toFixed(0)-49)/24))*440
+                hertzTest = (((octave*12))*(setVal/setValMax))+28;
+                hertz = (2**((hertzTest.toFixed(0)-49)/(octave*12)))*440
                 hertz = hertz.toFixed(2);
             for (i = 3; i < edit.length; i++){
                 if (edit[i] == true)
