@@ -138,7 +138,7 @@
             //Adjusts Hz of the output oscillator
                 //Declare min/max in hertz
                 hertzTest = (((octave*12))*(setVal/setValMax))+28;
-                hertz = (2**((hertzTest.toFixed(0)-49)/(octave*12)))*440
+                hertz = (2**((hertzTest.toFixed(0)-49)/(12)))*440
                 hertz = hertz.toFixed(2);
             for (i = 3; i < edit.length; i++){
                 if (edit[i] == true)
