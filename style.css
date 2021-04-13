@@ -1,9 +1,9 @@
 /*All of the bodies inside which things are placed*/
     body {
-        background-image: url(zWood);}
+        background-image: url(./zWood.jpeg);}
     span.main {
         position: absolute;
-        background-image: url(zBlackground);
+        background-image: url(./zBlackground.jpg);
         background-clip: padding-box;
         border: 16px solid #313537;
         border-radius: 36px;
@@ -49,31 +49,33 @@
         opacity: 50%;}
     div.flex1 {
         position: inherit;
-        background-image: url(zWood2);
+        background-image: url(./zWood2.jpeg);
         background-color: rgb(148, 63, 63);
         border-bottom: 10px solid #313537;
         width: 33.33%;
         height: 18%;
         top: 0px;
         left: 0%;}
-    div.flex2 {
-        position: inherit;
-        background-image: url(zWood2);
-        background-color: rgb(148, 63, 63);
-        border-bottom: 10px solid #313537;
-        width: 33.33%;
-        height: 18%;
-        top: 0px;
-        left: 33.33%;}
-    div.flex3 {
-        position: inherit;
-        background-image: url(zWood2);
-        background-color: rgb(148, 63, 63);
-        border-bottom: 10px solid #313537;
-        width: 33.33%;
-        height: 18%;
-        top: 0px;
-        left: 66.66%;}
+div.flex2 {
+    position: inherit;
+    background-image: url(./zWood2.jpeg);
+    background-color: rgb(148, 63, 63);
+    border-bottom: 10px solid #313537;
+    width: 33.33%;
+    height: 18%;
+    top: 0px;
+    left: 33.33%;
+}
+div.flex3 {
+    position: inherit;
+    background-image: url(./zWood2.jpeg);
+    background-color: rgb(148, 63, 63);
+    border-bottom: 10px solid #313537;
+    width: 33.33%;
+    height: 18%;
+    top: 0px;
+    left: 66.66%;
+}
     div.flexBarOut {
         position: inherit;
         border: 8px solid black;
@@ -148,7 +150,7 @@
         border: 16px solid #696969;
         border-radius: 36px;
         border-bottom-right-radius: 80px;
-        background-image: url(zSpaceground);
+        background-image: url(./zSpacegroundjpg);
         left: 0px;
         right: 0px;
         top: 0px;
@@ -371,7 +373,7 @@
         height: 100px;}
     button.notePress {
         position: inherit;
-        background-image: url(zMetal);
+        background-image: url(./zMetal.jpeg);
         border: 5px solid #414647;
         border-radius: 40px;
         width: 80px;
@@ -389,7 +391,7 @@
             outline: none;}
     button.notePress2 {
         position: inherit;
-        background-image: url(zMetal);
+        background-image: url(./zMetal.jpeg);
         border: 5px solid #414647;
         border-radius: 40px;
         width: 80px;
@@ -400,14 +402,15 @@
         font-weight: bold;
         font-family: comic sans MS;
         box-shadow: none;
-        outline: none;}
+        outline: none;
+    }
         button.notePress2:active {
             border-color: #585d5e;
             box-shadow: none;
             outline: none;}
     button.notePress3 {
         position: inherit;
-        background-image: url(zMetal);
+        background-image: url(./zMetal.jpeg);
         border: 5px solid #414647;
         border-radius: 40px;
         width: 80px;
@@ -418,7 +421,8 @@
         font-weight: bold;
         font-family: comic sans MS;
         box-shadow: none;
-        outline: none;}
+        outline: none;
+    }
         button.notePress3:active {
             border-color: #585d5e;
             box-shadow: none;
