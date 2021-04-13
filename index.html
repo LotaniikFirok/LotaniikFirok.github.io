@@ -3,15 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glove Receiver</title>
-    <link rel="stylesheet" href="cssTest.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <script src="Tone.js"></script>
-<script src="javaTest.js"></script>
+<script src="script.js"></script>
 
-<body onload="loadMe()">
+<body onload="loadMe(), wsConnect()">
     <span class="settings">
-        <img class="gear" src="./zAssets/settings.png" onclick="openSettings()">
-        <img class="links" src="./zAssets/daDrip.png" onclick="openRefs()">
+        <img class="gear" src="zSetting" onclick="openSettings()">
+        <img class="links" src="zDrip" onclick="openRefs()">
         <div class="settings" id="settings">
             <center>Change Volume</center><br>
                 <text class="fieldLabel">Max Vol (Decibels)</text>
@@ -29,10 +29,10 @@
     <div class="references" id="references">
         <div class="thank">
             <div class="thankOne">A very special thank you to the team members who all put in 
-            hours of blood, sweat, and tears to see this project come to life. 
+            hours of blood, sweat, tears and more tears to see this project come to life. 
             From concept, to software, pen and paper to physical model, these members 
             have all shown true effort and dedication to complete this project.</div>
-            <img class="glove" src="./zAssets/glov.jpg">
+            <img class="glove" src="zGlov">
             <table class="thankTwo">
                 <tr><td><center><text style="font-size: 20px;">Da Team</text></center></td></tr>
                 <tr><td>Brendan Chong<br>&nbsp-Mechanical Lead</td></tr>
@@ -54,12 +54,12 @@
                 <td class="aboutTeam" id="aboutTeam">
                     <table class="members">
                         <tr>
-                            <td class="profile"><img class="profile" src="./zAssets/Person1.jpeg"></td>
-                            <td class="profile"><img class="profile" src="./zAssets/Person2.jpeg"></td>
-                            <td class="profile"><img class="profile" src="./zAssets/Person3.jpeg"></td>
-                            <td class="profile"><img class="profile" src="./zAssets/Person4.jpeg"></td>
-                            <td class="profile"><img class="profile" src="./zAssets/Person5.jpeg"></td>
-                            <td class="profile"><img class="profile" src="./zAssets/Person6.jpeg"></td>
+                            <td class="profile"><img class="profile" src="zPerson1"></td>
+                            <td class="profile"><img class="profile" src="zPerson2"></td>
+                            <td class="profile"><img class="profile" src="zPerson3"></td>
+                            <td class="profile"><img class="profile" src="zPerson4"></td>
+                            <td class="profile"><img class="profile" src="zPerson5"></td>
+                            <td class="profile"><img class="profile" src="zPerson6"></td>
                         </tr>
                         <tr>
                             <td class="profileName">
@@ -68,9 +68,9 @@
                                 <center>
                                 <table>
                                     <tr>
-                                        <td><img class="icon" src="./zAssets/icon1.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon2.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon3.png"></td>
+                                        <td><img class="icon" src="zIG" onclick="window.open('https://www.instagram.com/brendan_chong18?r=nametag', '_newtab')"></td>
+                                        <td><img class="icon" src="zFB" onclick="window.open('https://www.facebook.com/clement.hii.100/', '_newtab')"></td>
+                                        <td><img class="icon" src="zLI" onclick="window.open('https://www.linkedin.com/in/brendan-chong', '_newtab')"></td>
                                     </tr>
                                 </table>
                                 </center>
@@ -78,63 +78,74 @@
                             </td>
                             <td class="profileName">
                                 Clement Hii
+                                <div class="socials">
                                 <center>
-                                <table class="socials">
+                                <table>
                                     <tr>
-                                        <td><img class="icon" src="./zAssets/icon1.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon2.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon3.png"></td>
+                                        <td><img class="icon" src="zIG" onclick="window.open('https://www.instagram.com/clem_hii/', '_newtab')"></td>
+                                        <td><img class="icon" src="zFB" onclick="window.open('https://www.facebook.com/clement.hii.100/', '_newtab')"></td>
+                                        <td><img class="icon" src="zLI" onclick="window.open('https://www.linkedin.com/in/clement-hii-a5b334190/', '_newtab')"></td>
                                     </tr>
                                 </table>
                                 </center>
+                                </div>
                             </td>
                             <td class="profileName">
                                 Jacky Kam
+                                <div class="socials">
                                 <center>
-                                <table class="socials">
+                                <table>
                                     <tr>
-                                        <td><img class="icon" src="./zAssets/icon1.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon2.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon3.png"></td>
+                                        <td><img class="icon" src="zIG" onclick="window.open('https://www.instagram.com/jacky.kam01?r=nametag', '_newtab')"></td>
+                                        <td><img class="icon" src="zFB" onclick="window.open('https://www.facebook.com/profile.php?id=100006254537652', '_newtab')"></td>
+                                        <td><img class="icon" src="zLI" onclick="window.open('https://www.linkedin.com/in/jacky-kam-813075207/', '_newtab')"></td>
+                                        <td><img class="icon" src="zYT" onclick="window.open('https://www.youtube.com/channel/UCChlkrTA0DMSS9GRHNfU7vA', '_newtab')"></td>
                                     </tr>
                                 </table>
                                 </center>
+                                </div>
                             </td>
                             <td class="profileName">
                                 Gourang Kulkarni
+                                <div class="socialsGK">
                                 <center>
-                                <table class="socials">
+                                <table>
                                     <tr>
-                                        <td><img class="icon" src="./zAssets/icon1.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon2.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon3.png"></td>
+                                        <td><img class="icon" src="zIG" onclick="window.open('', '_newtab')"></td>
+                                        <td><img class="icon" src="zFB" onclick="window.open('', '_newtab')"></td>
+                                        <td><img class="icon" src="zLI" onclick="window.open('', '_newtab')"></td>
                                     </tr>
                                 </table>
                                 </center>
+                                </div>
                             </td>
                             <td class="profileName">
                                 Samuel Krisetia
+                                <div class="socials">
                                 <center>
-                                <table class="socials">
+                                <table>
                                     <tr>
-                                        <td><img class="icon" src="./zAssets/icon1.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon2.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon3.png"></td>
+                                        <td><img class="icon" src="zIG" onclick="window.open('', '_newtab')"></td>
+                                        <td><img class="icon" src="zFB" onclick="window.open('', '_newtab')"></td>
+                                        <td><img class="icon" src="zLI" onclick="window.open('', '_newtab')"></td>
                                     </tr>
                                 </table>
                                 </center>
+                                </div>
                             </td>
                             <td class="profileName">
                                 Richard Lushai
+                                <div class="socials">
                                 <center>
-                                <table class="socials">
+                                <table>
                                     <tr>
-                                        <td><img class="icon" src="./zAssets/icon1.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon2.png"></td>
-                                        <td><img class="icon" src="./zAssets/icon3.png"></td>
+                                        <td><img class="icon" src="zIG" onclick="window.open('', '_newtab')"></td>
+                                        <td><img class="icon" src="zFB" onclick="window.open('', '_newtab')"></td>
+                                        <td><img class="icon" src="zLI" onclick="window.open('', '_newtab')"></td>
                                     </tr>
                                 </table>
                                 </center>
+                                </div>
                             </td>
                         </tr>
                     </table>
@@ -157,25 +168,25 @@
     <span class="main">
         <!--Divs to display current flex sensor readings-->
         <div class="flex1">
-            <text class="flexLabel">ThumbyThicc</text>
+            <text class="flexLabel">Volume (Thumb)</text>
             <div class="flexBarOut">
                 <div class="flexBarIn" id="pointerBar"></div>
             </div>
-            <div class="flexNum" id="flexNum1">uwu</div>
+            <div class="flexNum" id="flexNum1"></div>
         </div>
         <div class="flex2">
-            <text class="flexLabel">Pointer</text>
+            <text class="flexLabel">Pitch  (Pointer)</text>
             <div class="flexBarOut">
                 <div class="flexBarIn" id="middleBar"></div>
             </div>
-            <div class="flexNum" id="flexNum2">o_O</div>
+            <div class="flexNum" id="flexNum2"></div>
         </div>
         <div class="flex3">
-            <text class="flexLabel">Middle</text>
+            <text class="flexLabel">Beats Per Min (Middle)</text>
             <div class="flexBarOut">
                 <div class="flexBarIn" id="thumbBar"></div>
             </div>
-            <div class="flexNum" id="flexNum3">OwO</div>
+            <div class="flexNum" id="flexNum3"></div>
         </div>
 
         <div class="displays">

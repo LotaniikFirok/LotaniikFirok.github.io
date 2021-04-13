@@ -1,3 +1,16 @@
+//-----Lotta testing shit-----//
+    //
+    setInterval(function(){
+        var xttp = new XMLHttpRequest();
+        xttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                console.log(this.responseText);
+            }
+        };
+        xhttp.open("GET", "/sensors", true);
+        xhttp.send();
+    }, 30000);
+
 //Declaring aspect variables
     var volume;
         var maxVol;
@@ -8,7 +21,6 @@
     var bpmtest;
     var bpmMax;
     var bpmMin;
-    var octave;
     //Declare additional variables
     var hertzTest; //To be used in creating octaves from frequency
     var setValMax; //Max value decided for input sliders, range from setVal -> setValMax
@@ -32,7 +44,6 @@
         minHertz = 0;
         bpmMax = 240;
         bpmMin = 30;
-        octave = 2;
         play = [false, false, false, false, false, false, false, false, false, false];
         m_play = false
         edit = [true, false, false, false, false, false, false, false, false, false];
@@ -137,8 +148,8 @@
         if (finger == pointer){
             //Adjusts Hz of the output oscillator
                 //Declare min/max in hertz
-                hertzTest = (((octave*12))*(setVal/setValMax))+28;
-                hertz = (2**((hertzTest.toFixed(0)-49)/(12)))*440
+                hertzTest = ((12)*(setVal/setValMax))+28;
+                hertz = (2**((hertzTest.toFixed(0)-49)/12))*440
                 hertz = hertz.toFixed(2);
             for (i = 3; i < edit.length; i++){
                 if (edit[i] == true)

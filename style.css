@@ -1,14 +1,14 @@
 /*All of the bodies inside which things are placed*/
     body {
-        background-image: url(./zAssets/wood.jpeg);}
+        background-image: url(zWood);}
     span.main {
         position: absolute;
-        background-image: url(./zAssets/blackground.jpg);
+        background-image: url(zBlackground);
         background-clip: padding-box;
         border: 16px solid #313537;
         border-radius: 36px;
         border-bottom-right-radius: 80px;
-        background-color: white;
+        background-color: rgb(39, 39, 39);
         left: 0px;
         right: 0px;
         top: 0px;
@@ -49,8 +49,8 @@
         opacity: 50%;}
     div.flex1 {
         position: inherit;
-        background-image: url(./zAssets/wood2.jpeg);
-        background-color: pink;
+        background-image: url(zWood2);
+        background-color: rgb(148, 63, 63);
         border-bottom: 10px solid #313537;
         width: 33.33%;
         height: 18%;
@@ -58,8 +58,8 @@
         left: 0%;}
     div.flex2 {
         position: inherit;
-        background-image: url(./zAssets/wood2.jpeg);
-        background-color: hotpink;
+        background-image: url(zWood2);
+        background-color: rgb(148, 63, 63);
         border-bottom: 10px solid #313537;
         width: 33.33%;
         height: 18%;
@@ -67,8 +67,8 @@
         left: 33.33%;}
     div.flex3 {
         position: inherit;
-        background-image: url(./zAssets/wood2.jpeg);
-        background-color: fuchsia;
+        background-image: url(zWood2);
+        background-color: rgb(148, 63, 63);
         border-bottom: 10px solid #313537;
         width: 33.33%;
         height: 18%;
@@ -148,7 +148,7 @@
         border: 16px solid #696969;
         border-radius: 36px;
         border-bottom-right-radius: 80px;
-        background-image: url(./zAssets/spaceground.jpg);
+        background-image: url(zSpaceground);
         left: 0px;
         right: 0px;
         top: 0px;
@@ -355,7 +355,14 @@
         right: 0px;
         bottom: 0px;
         margin: auto;
-        padding-top: 20px;}
+        padding-top: 25px;}
+    div.socialsGK{
+        position: relative;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: auto;
+        padding-top: -10px;}
 
     /*All of the input types*/
     button.track{
@@ -364,7 +371,7 @@
         height: 100px;}
     button.notePress {
         position: inherit;
-        background-image: url(./zAssets/metal.jpeg);
+        background-image: url(zMetal);
         border: 5px solid #414647;
         border-radius: 40px;
         width: 80px;
@@ -382,7 +389,7 @@
             outline: none;}
     button.notePress2 {
         position: inherit;
-        background-image: url(./zAssets/metal.jpeg);
+        background-image: url(zMetal);
         border: 5px solid #414647;
         border-radius: 40px;
         width: 80px;
@@ -400,7 +407,7 @@
             outline: none;}
     button.notePress3 {
         position: inherit;
-        background-image: url(./zAssets/metal.jpeg);
+        background-image: url(zMetal);
         border: 5px solid #414647;
         border-radius: 40px;
         width: 80px;
@@ -440,6 +447,7 @@
     /*Embellishments such as text and images*/
     img.gear {
         position: absolute;
+        background-color: chartreuse;
         height: 90%;
         right: 5px}
     img.glove {
@@ -513,7 +521,7 @@
         padding-left: 10px;
         padding-right: 10px;
         text-align: center;
-        font-size: 40px;
+        font-size: 30px;
         font-family: comic sans MS;
         font-weight: bold;}
     text.trackDisplayFluff{
@@ -522,7 +530,7 @@
         bottom: 0px;
         margin: auto;
         padding-right: 40px;
-        font-size: 40px;
+        font-size: 30px;
         font-family: comic sans MS;
         font-weight: bold;}
 
