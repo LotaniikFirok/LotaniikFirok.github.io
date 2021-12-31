@@ -1,12 +1,12 @@
 
 /* import fonts from fonts.css file*/
-@import url(./fonts.css);
+@import url(/fonts.css);
 
 /*CSS Variables*/
-@import url(./partials/_variables.css);
+@import url(/partials/_variables.css);
 
 /*import global styling*/
-@import url(./partials/_globals.css);
+@import url(/partials/_globals.css);
 
 body{
     background: var(--gradient-color);
