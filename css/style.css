@@ -3,10 +3,10 @@
 @import url(/fonts.css);
 
 /*CSS Variables*/
-@import url(/variables.css);
+@import url(/partials/variables.css);
 
 /*import global styling*/
-@import url(/globals.css);
+@import url(/partials/globals.css);
 
 body{
     background: var(--gradient-color);
