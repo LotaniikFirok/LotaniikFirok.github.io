@@ -1,0 +1,350 @@
+
+/* import fonts from fonts.css file*/
+@import url(./fonts.css);
+
+/*CSS Variables*/
+@import url(./partials/_variables.css);
+
+/*import global styling*/
+@import url(./partials/_globals.css);
+
+body{
+    background: var(--gradient-color);
+}
+.body-contain{
+    background: var(--gradient-color2);
+}
+
+/*start navigation*/
+
+
+.navbar-brand{
+    padding-left: 100px;
+}
+.navbar{
+    padding-right: 0px;
+    color: var(--gradient-color);
+}
+
+.nav-link{
+    font: normal 500 30px/2px var(--montserrat);
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.header-area.main-menu.navbar-nav.active a{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-area.main-menu.navbar-nav a:hover{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/*end navigation*/
+
+/*Start Banner Area (background picture)*/
+.banner-area{
+    padding-top: 15%;
+    margin-left: 10%;
+}
+
+.banner-img{
+    margin-left: 5%;
+    
+}
+    /*Title Text*/
+
+
+
+/*End Banner Area*/
+
+/*Start Aboot Area*/
+.about-area{
+    padding: 5%;
+    margin-top: 10rem;
+}
+
+.about-image{
+    margin-top: 10%;
+}
+
+/*End Aboot Area*/
+
+/*Start Project Area*/
+.project-area{
+    margin-top: 10%;
+}
+
+.proj-title{
+    text-align:center;
+    letter-spacing: 20px;
+    font:normal 5vw var(--montserrat);
+    padding-top: 5%;
+}
+
+.button-group{
+    padding: 5%;
+}
+
+.proj-btn{
+    margin-top: 1%;
+    margin-left: 1%;
+    text-align: center;
+}
+
+button:focus,
+button:active
+button:hover
+.btn:active,
+.btn.active{
+    outline: 0px !important
+}
+
+.proj-grid{
+    width: 90vw;
+    margin: auto;
+    justify-content: center;
+    
+}
+
+.our-project{
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.proj-icon{
+    border-radius: 100%;
+    overflow: hidden;
+    width: 20vw;
+    height: 20vw;
+    
+    min-width: 200px;
+    min-height: 200px;
+    margin: auto;
+}
+
+.proj-icon:hover{
+    background: black;
+    color: whitesmoke;
+    box-shadow: var(--icon-shadow);
+}
+
+.proj-img{
+    width: 100%;
+}
+
+
+
+
+/*Project Description Animations*/
+
+.proj-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proj-cont{
+    position: relative;
+    display: flex;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 245, 245, 0);
+}
+
+
+.contentBx{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70%;
+    width: 100%;
+    background: var(--gradient-color3);
+    transition: transform 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+
+.proj-icon:hover >.contentBx{
+    transition: transform 1s;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.content{
+    position: absolute;
+
+}
+
+.content h2{
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+.content p{
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+/*Modals*/
+/* The Modal (background) */
+.modal {
+    display: hidden; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: rgb(0, 0, 0);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(192, 192, 192);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.carousel-item{
+    width: 100%;
+    height: 100%;
+
+    padding: 2vw;
+}
+
+
+
+.caro-img{
+    height: 50vh;
+    width: auto;
+}
+
+.carousel-caption{
+    margin-bottom: 1vh;
+}
+
+/* Modal Header */
+    .modal-header {
+        padding: 2px 16px;
+        background: var(--gradient-color3);
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    /* Modal Body */
+    .modal-body {
+        padding: 2px 16px; 
+    }
+
+
+    /* Modal Footer */
+    .modal-footer {
+        padding: 2px 16px;
+        background: var(--gradient-colorE);
+        color: white;
+        margin-top: 10px;
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: #303030;
+        margin: auto;
+        margin-top: 5%;
+        padding: 0;
+        border: 1px solid rgba(25, 158, 47, 0.589);
+        width: 80%;
+        height: 80%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+        overflow: auto;
+    }
+
+    /* Add Animation */
+    @keyframes animatetop {
+        from {top: -300px; opacity: 0}
+        to {top: 0; opacity: 1}
+    }
+
+/*skillbars*/
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.skill-box{
+    background-color: rgba(0, 0, 0, 0.315);
+    padding: 50px;
+    width: 75%;
+    margin: auto;
+}
+
+.skill-box h1{
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font: italic 400 3vh var(--montserrat);
+}
+
+.skill-bar {
+  width: 100%; /* Full width */
+  background-color: #303030; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+
+.skill-mech {background-color: #04AA6D;} /* Green */
+.skill-elec {background-color: #2196F3;} /* Blue */
+.skill-code {background-color: #f44336;} /* Red */
+
+.parts-list{
+    margin-top: 40px;
+}
+
+.future-improv{
+    margin-top: 30px;
+}
+
+.web-info{
+    height: 500px;
+    width: 45%;
+    margin-left: 4%;
+}
+
+/*End Project Area*/
+
+

@@ -1,0 +1,167 @@
+
+
+/*Global Classes*/
+
+.title-text{
+    font: normal italic 4vw var(--montserrat);
+    color: var(--title-color);
+}
+
+.sub-text{
+    font: normal italic 300 2vw var(--montserrat);
+}
+
+.text-uppercase{
+    font: normal 300 4vw var(--montserrat);
+}
+
+/*Buttons*/
+
+.button{
+    padding: .8rem 2.2rem;
+    font-size: 2vw;
+    position: relative;
+    border: 0px solid transparent;
+    border-radius: 4px;
+}
+
+.button{
+    background:rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    transition: background .6s ease;
+}
+
+.button:hover{
+    background: var(--gradient-colorA);
+    color: whitesmoke;
+    box-shadow: var(--box-shadow);
+}
+
+.button::after{
+    position: absolute;
+    top: -2px; left:-2px;
+    bottom: -2px; right:-2px;
+    background: rgba(102, 162, 197, 0.5);
+    content: '';
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.link-btn a{
+    color: white;
+    text-decoration: none;
+}
+
+/*Start aboot area*/
+.about-title h2{
+    color: var(--title-color);
+    text-align: center;
+    font: normal 400 3.5vw var(--montserrat);
+}
+
+p.para{
+    color: var(--title-color);
+    font: normal 300 1.25vw var(--montserrat);
+}
+
+.proj-text{
+    padding: 10%;
+}
+
+.proj-text p{
+    font: normal italic 300 25% var(--montserrat);
+}
+
+.proj-text h2{
+    font: normal italic 300 2vw var(--montserrat);
+}
+
+
+
+
+/*figure out why font isnt changing*/
+.modal-header{
+    color: white;
+    font: normal bold 600 36px/25px var(--montserrat);
+}
+.modal-body >p{
+    color: white;
+    font: normal 300 30px/30px var(--montserrat);
+}
+.parts-list >p{
+    color: white;
+    font: normal 300 20px/10px var(--montserrat);
+}
+.future-improv >p{
+    color: white;
+    font: normal 300 20px/20px var(--montserrat);
+}
+
+.modal-body h1{
+    color: white;
+    font: normal 500 32px/30px var(--montserrat);
+}
+
+.modal-header h2{
+    color: white;
+    font: normal 500 35px/25px var(--montserrat);
+}
+
+.modal-footer h3{
+    color: white;
+    font: italic 500 25px/25px var(--montserrat);
+}
+
+.fill{
+    min-height: 100%;
+    height: 100%;
+}
+
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.466);
+}
+
+.carousel-caption h5{
+    color: white;
+    font: italic 500 8vh var(--montserrat);
+}
+
+.carousel-caption p{
+    color: white;
+    font: italic 500 2vh var(--montserrat);
+}
+
+.carousel-item h2{
+    color: white;
+    font: normal 400 2vw var(--montserrat);
+    text-align: center;
+    letter-spacing: 10px
+}
+
+.component-list{
+    width: 75%;
+    height: 75%;
+    text-align: center;
+}
+
+.parts-list h1{
+    font: normal 500 4vh var(--montserrat);    
+}
+
+.future-improv h1{
+    font: normal 500 4vh var(--montserrat); 
+}
+
+/*End aboot area*/
+
+
+.web-info h2{
+    font: normal 400 42px/20px var(--montserrat);
+    text-align: center;
+    margin-bottom: 15px;
+}
+.web-info p{
+    font: normal 300 26px/25px var(--montserrat);
+    text-align: center;
+
+}

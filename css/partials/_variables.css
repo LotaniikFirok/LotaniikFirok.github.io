@@ -1,0 +1,31 @@
+
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+/*CSS Variables*/
+:root{
+    --primary-color: #4458dc;
+    --primary-color2: #854fee;
+    --title-color: #ffffff;
+    --text-color: #777777;
+    --border-color: #201f1f17;
+    --gradient-color: linear-gradient(to left, #373b44, #4286f4);
+    --gradient-color2: linear-gradient(130deg, #c4c4c400 0%, #11f0093f 100%);
+    --gradient-color23: linear-gradient(130deg, #f8b1b1e0 0%, #11f009d0 100%);
+    --gradient-color3: linear-gradient(45deg, #e90f2c 10%, #d81dd8d8 90%);
+    --gradient-colorE: linear-gradient(45deg, #d81dd8c9 0%, #e90f2cd7 80%);
+    --gradient-colorA: linear-gradient(to left, #5433ff, #20bdff, #a5fecb);
+    --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+    --icon-shadow: 0px 10px 50px rgba(57, 56, 61, 0.3);
+
+
+/* Font Family Variables*/
+    --montserrat: "Montserrat",cursive;
+}

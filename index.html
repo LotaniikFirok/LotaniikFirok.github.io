@@ -1,272 +1,321 @@
-﻿<html>
-<head>
+<!DOCTYPE html>
+<hteml lang="en">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glove Receiver</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<script src="Tone.js"></script>
-<script src="script.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale =1.0">
+      <meta http-equiv="X-UA-Compatible"contect="ie-edge">
+      <title>Samuel Krisetia Portfolio</title>
 
-<body onload="loadMe(), wsConnect()">
-    <span class="settings">
-        <img class="gear" src="./zSetting.png" onclick="openSettings()">
-        <img class="links" src="./zDrip.png" onclick="openRefs()">
-        <div class="settings" id="settings">
-            <center>Change Volume</center><br>
-                <text class="fieldLabel">Max Vol (Decibels)</text>
-                <input type="text" class="fieldInput" id="newMaxVol" onchange="setMaxVol(this.value)"> db<br>
-                <text class="fieldLabel">Min Vol (Decibels)</text>
-                <input type="text" class="fieldInput" id="newMinVol" onchange="setMinVol(this.value)"> db<br>
-            <center>Change BPM</center>
-            <center><text style="font-size: 14px; font-weight: bold;">BPM <text class="hiddenText" onclick="playMe(0)">cannot</text> be <= 0</text></center><br>
-                <text class="fieldLabel">Max BPM (BPM)</text>
-                <input type="text" class="fieldInput" id="newMaxBPM" onchange="setMaxBPM(this.value)"> bpm<br>
-                <text class="fieldLabel">Max BPM (BPM)</text>
-                <input type="text" class="fieldInput" id="newMinBPM" onchange="setMinBPM(this.value)"> bpm
-        </div>
-    </span>
-    <div class="references" id="references">
-        <div class="thank">
-            <div class="thankOne">A very special thank you to the team members who all put in 
-<<<<<<< HEAD
-            hours of blood, sweat, tears and more tears to see this project come to life. 
+      <!-- Bootstrap css file-->
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
+      
+      <!-- font awesome(icons)-->
+      <link rel="stylesheet" href="./css/all.min.css">
 
->>>>>>> parent of 7ee5f5a (ok)
-            From concept, to software, pen and paper to physical model, these members 
-            have all shown true effort and dedication to complete this project.</div>
-            <img class="glove" src="./zGlov.jpg">
-            <table class="thankTwo">
-                <tr><td><center><text style="font-size: 20px;">Da Team</text></center></td></tr>
-                <tr><td>Brendan Chong<br>&nbsp-Mechanical Lead</td></tr>
-                <tr><td>Clement Hii<br>&nbsp-'Fearless' Leader</td></tr>
-                <tr><td>Jacky Kam<br>&nbsp-Software Lead</td></tr>
-                <tr><td>Samuel Krisetia<br>&nbsp-Software Co-Lead</td></tr>
-                <tr><td>Gourang Kulkarni<br>&nbsp-Gym Rep</td></tr>
-                <tr><td>Richard Lushai<br>&nbsp-Mechanical Co-Lead</td></tr>
-            </table>
+      <!-- custom css file-->
+      <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+<body>
+  
+  
+  <!--------------------Header Area Start-------------------------->
+  <header class="header-area">
+    <div id="main-menu">
+      <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        
+        <a class="navbar-brand" href="#"><img src="./img/road.JPG" style="max-width: 5%;" alt="logo"></a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-item nav-link active" href="#_home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#_aboutme">AboutMe</a>
+            <a class="nav-item nav-link" href="#_projects">Projects</a>
+            <a class="nav-item nav-link" href="#">Contact</a>
+          </div>
         </div>
-        <table class="about" id="about">
-            <tr>
-                <td class="aboutTabGlove" onmouseover="about(1)">About da glove</td>
-                <td class="aboutTabTeam" onmouseover="about(2)">About da team</td>
-            </tr>
-            <tr>
-                <td class="aboutGlove" id="aboutGlove">
-                </td>
-                <td class="aboutTeam" id="aboutTeam">
-                    <table class="members">
-                        <tr>
-                            <td class="profile"><img class="profile" src="./zPerson1.jpeg"></td>
-                            <td class="profile"><img class="profile" src="./zPerson2.jpg"></td>
-                            <td class="profile"><img class="profile" src="./zPerson3.jpeg"></td>
-                            <td class="profile"><img class="profile" src="./zPerson4.jpeg"></td>
-                            <td class="profile"><img class="profile" src="./zPerson5.jpg"></td>
-                            <td class="profile"><img class="profile" src="./zPerson6.jpg"></td>
-                        </tr>
-                        <tr>
-                            <td class="profileName">
-                                Brendan Chong
-                                <div class="socials">
-                                <center>
-                                <table>
-                                    <tr>
-                                        <td><img class="icon" src="./zIG.png" onclick="window.open('https://www.instagram.com/brendan_chong18?r=nametag', '_newtab')"></td>
-                                        <td><img class="icon" src="./zFB.png" onclick="window.open('https://www.facebook.com/clement.hii.100/', '_newtab')"></td>
-                                        <td><img class="icon" src="./zLI.png" onclick="window.open('https://www.linkedin.com/in/brendan-chong', '_newtab')"></td>
-                                    </tr>
-                                </table>
-                                </center>
-                                </div>
-                            </td>
-                            <td class="profileName">
-                                Clement Hii
-                                <div class="socials">
-                                <center>
-                                <table>
-                                    <tr>
-                                        <td><img class="icon" src="./zIG.png" onclick="window.open('https://www.instagram.com/clem_hii/', '_newtab')"></td>
-                                        <td><img class="icon" src="./zFB.png" onclick="window.open('https://www.facebook.com/clement.hii.100/', '_newtab')"></td>
-                                        <td><img class="icon" src="./zLI.png" onclick="window.open('https://www.linkedin.com/in/clement-hii-a5b334190/', '_newtab')"></td>
-                                    </tr>
-                                </table>
-                                </center>
-                                </div>
-                            </td>
-                            <td class="profileName">
-                                Jacky Kam
-                                <div class="socials">
-                                <center>
-                                <table>
-                                    <tr>
-                                        <td><img class="icon" src="./zIG.png" onclick="window.open('https://www.instagram.com/jacky.kam01?r=nametag', '_newtab')"></td>
-                                        <td><img class="icon" src="./zFB.png" onclick="window.open('https://www.facebook.com/profile.php?id=100006254537652', '_newtab')"></td>
-                                        <td><img class="icon" src="./zLI.png" onclick="window.open('https://www.linkedin.com/in/jacky-kam-813075207/', '_newtab')"></td>
-                                        <td><img class="icon" src="./zYT.png" onclick="window.open('https://www.youtube.com/channel/UCChlkrTA0DMSS9GRHNfU7vA', '_newtab')"></td>
-                                    </tr>
-                                </table>
-                                </center>
-                                </div>
-                            </td>
-                            <td class="profileName">
-                                Gourang Kulkarni
-                                <div class="socialsGK">
-                                <center>
-                                <table>
-                                    <tr>
-                                        <td><img class="icon" src="./zIG.png" onclick="window.open('', '_newtab')"></td>
-                                        <td><img class="icon" src="./zFB.png" onclick="window.open('', '_newtab')"></td>
-                                        <td><img class="icon" src="./zLI.png" onclick="window.open('', '_newtab')"></td>
-                                    </tr>
-                                </table>
-                                </center>
-                                </div>
-                            </td>
-                            <td class="profileName">
-                                Samuel Krisetia
-                                <div class="socials">
-                                <center>
-                                <table>
-                                    <tr>
-                                        <td><img class="icon" src="./zIG.png" onclick="window.open('', '_newtab')"></td>
-                                        <td><img class="icon" src="./zFB.png" onclick="window.open('', '_newtab')"></td>
-                                        <td><img class="icon" src="./zLI.png" onclick="window.open('', '_newtab')"></td>
-                                    </tr>
-                                </table>
-                                </center>
-                                </div>
-                            </td>
-                            <td class="profileName">
-                                Richard Lushai
-                                <div class="socials">
-                                <center>
-                                <table>
-                                    <tr>
-                                        <td><img class="icon" src="./zIG.png" onclick="window.open('', '_newtab')"></td>
-                                        <td><img class="icon" src="./zFB.png" onclick="window.open('', '_newtab')"></td>
-                                        <td><img class="icon" src="./zLI.png" onclick="window.open('', '_newtab')"></td>
-                                    </tr>
-                                </table>
-                                </center>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-        <div class="siteContainer">
-            References found here:<br>
-            <div class="sites">
-                <text class="references">&emsp;<a href="https://www.w3schools.com/html/default.asp" target="_blank">Learn HTML here</a></text><br>
-                <text class="references">&emsp;<a href="https://www.w3schools.com/css/default.asp" target="_blank">Learn CSS here</a></text><br>
-                <text class="references">&emsp;<a href="https://www.w3schools.com/js/default.asp" target="_blank">Learn JavaScript here</a></text><br>
-                <text class="references">&emsp;<a href="https://tonejs.github.io/" target="_blank">Tone.js API library</a></text><br>
-                <text class="references">&emsp;<a href="https://www.guitarland.com/MusicTheoryWithToneJS/PlayNote.html" target="_blank">Example: Editable Volume/Bpm/Frequency</a></text><br>
-                <text class="references">&emsp;<a href="http://sites.music.columbia.edu/cmc/courses/g6611/spring2018/week3/index.html" target="_blank">Example: Start/Stop using Oscillator</a></text><br>
-                <text class="references">&emsp;<a href="https://github.com/Team-06-Haptic-Glove/MIDI-Controller" target="_blank">Team Github</a></text>
-            </div>
-        </div>
+      </nav>
     </div>
-    <span class="main">
-        <!--Divs to display current flex sensor readings-->
-        <div class="flex1">
-            <text class="flexLabel">Volume (Thumb)</text>
-            <div class="flexBarOut">
-                <div class="flexBarIn" id="pointerBar"></div>
+    </div>
+  </header>  
+  <!---------------------End Header Area-------------------------->
+  <!------------------------Start Main Area---------------------->
+  <main class="site-main" >
+      <div class="container-fluid">
+        <div class="row banner-area" id="_home">
+          <div class="col-6  site-title" >
+            <h3 class="title-text text-uppercase">Hi,</h3>
+            <h1 class="title-text text-uppercase">My name is Samuel Krisetia</h1>
+            <h4 class="title-text sub-text" >3rd Year Integrated Engineering Student</h4>
+             
+            <div class="side-buttons">
+              <div class="d-flex flex-row flex-wrap">
+                <!-- "button, primary-button" are custom classes-->
+                <button type="button" class="btn button primary-button me-4 text-uppercase link-btn">
+                    <a href="./img/SamuelKRes(02052021).pdf">Resume</a>
+                </button>
+              </div>
             </div>
-            <div class="flexNum" id="flexNum1"></div>
+          </div>
+          <div class="col-5 banner-img">
+            <!--<img src="./img/nani.PNG" alt="banner-img" class="img-fluid">-->
+          </div>
         </div>
-        <div class="flex2">
-            <text class="flexLabel">Pitch  (Pointer)</text>
-            <div class="flexBarOut">
-                <div class="flexBarIn" id="middleBar"></div>
-            </div>
-            <div class="flexNum" id="flexNum2"></div>
+      </div>
+
+
+      <div class="container-fluid">
+        <div class="row about-area" id="_aboutme">
+          <div class="col-6">
+              <div class="about-image">
+                  <img src="./img/hillview.png" alt="About us" class="img-fluid">
+              </div>
+          </div>
+          <div class="col-6 about-title">
+              <h2 class="text-uppercase pt-5">
+                  <span>Let me introduce myself</span>
+               </h2>
+               <div class="paragraph py-3 w-100">
+                   <p class="para">
+                      <!--this is the about me section-->
+                      Hi, welcome to my portfolio! I am currently an Integrated Engineering student at UBC specializing in the mechanical and electrical aspects.
+                      I enjoy engineering because it allows me to really test my mind to come up with solutions to problems, rather than just memorizing set solutions. 
+                      My dream career would be to work in R&D where that broad problem solving is something that is needed there.
+                   </p>
+                   <p class="para">
+                      Other than engineering, other things I enjoy doing is travelling and cooking/eating. This boils down to wanting to try new things and to explore what the world has to offer.
+                   </p>
+               </div>  
+               <!--
+               <button type="button" class="btn button primary-button text-uppercase">It's ya boi</button> 
+               -->
+          </div>
         </div>
-        <div class="flex3">
-            <text class="flexLabel">Beats Per Min (Middle)</text>
-            <div class="flexBarOut">
-                <div class="flexBarIn" id="thumbBar"></div>
-            </div>
-            <div class="flexNum" id="flexNum3"></div>
+      </div>
+
+    <section class="project-area" id="_projects">
+      <div class="container-fluid" >
+        <div class="title-text text-uppercase proj-title">Projects</div>
+        
+        <div class="row button-group justify-content-center">
+          <button type="button" class="button proj-btn col title-text text-uppercase active">All</button>
+            <button type="button" class="button proj-btn col title-text text-uppercase" data-filter=".complete">Complete</button>
+            <button type="button" class="button proj-btn col title-text text-uppercase" data-filter=".mechanical">Mechanical</button>
+            <button type="button" class="button proj-btn col title-text text-uppercase" data-filter=".electrical">Electrical</button>
+            <button type="button" class="button proj-btn col title-text text-uppercase" data-filter=".software">Software</button>
+            <button type="button" class="button proj-btn col title-text text-uppercase" data-filter=".ongoing">Ongoing</button>
         </div>
 
-        <div class="displays">
-            <!--Interface for play/pause/stop-->
-            <div class="button1">
-                <!--Global Play/Stop for all tracks-->
-                <div class="play" id="play"></div>
-                <text class="play">Play</text>
-                <div class="stop" id="stop"></div>
-                <text class="stop">Stop</text>
-                <!--Displays the current track being edited-->
-                <div class="trackDisplay">
-                    <text class="trackDisplayFluff">Current Track:</text>
-                    <text class="trackDisplay" id="trackDisplay">Buffer</text>
+        <div class="row grid proj-grid">
+          <div class="col-lg-4 col-md-6 col-sm-12 element-item mechanical complete">
+            <div class="our-project">
+              <div class="proj-icon ">
+                <img src="./img/projects/autoclaw.png" class="proj-img" onclick ="modalBtn(1)">
+                
+                <div id="myModal1" class="modal">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <h2>Autonomous Claw</h2>
+                      </div>
+                      <div class="modal-body">
+                        <div id="carouselExampleControls" class="carousel slide fill" data-bs-ride="carousel">
+                          
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+
+                          <div class="carousel-inner fill">
+                            <div class="carousel-item fill active">
+                            
+                              <img src="./img/projects/autoclaw.png" class="d-block mx-auto caro-img" alt="...">
+                              <div class="carousel-caption d-md-block">
+                                <h5>Autonomous Claw</h5>
+                                <p>The Autonomous Claw is an Arduino controlled, sheet metal claw which used a servo to control the open/close functions.
+                                    The claw is designed to be able to detect and pick up objects of various sizes and at the same time pick up bulk amounts of smaller objects, such as dried pasta shells.</p>
+                                
+                              
+                                  </div>                  
+
+                            </div>
+
+                            <div class="carousel-item fill">
+                              <h2>Project Attribute Distribution</h2>
+                              
+                              <div class="skill-box">
+                                <h1>Mechanical</h1>
+                                <div class="container skill-bar">
+                                    <div class="skills skill-mech" style="width: 75%;">75%</div>
+                                </div>
+
+                                <h1>Electrical</h1>
+                                <div class="container skill-bar">
+                                    <div class="skills skill-elec" style="width: 10%;">10%</div>
+                                </div>
+
+                                <h1>Software</h1>
+                                <div class="container skill-bar">
+                                    <div class="skills skill-code" style="width: 15%;">15%</div>
+                                </div>
+                            
+                              </div>
+                            </div>
+                            <div class="carousel-item fill">
+                              <div class="component-list mx-auto">  
+                                <div class="parts-list">
+                                    <h1>Main components used:</h1>
+                                    <p>Arduino Uno, Servo, Ultrasonic Sensor, Sheet Metal</p>
+                                  </div>
+
+                                  <div class="future-improv">
+                                    <h1>Future Improvements:</h1>
+                                    <p>The claw was a group project that ended up being rushed to complete. This caused the claw to not be aligned and sturdy, thus reducing
+                                        the reliability of it's performance. A cleaner construction would have led to a better performance.
+                                    </p>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>  
+                      
+                      </div>
+                      <div class="modal-footer">
+                          <h3>Mechanical: 5 People</h3>
+                      </div>
+                  </div>
+              </div>
+
+                <div class="contentBx" style="margin-top: -75%;" onclick ="modalBtn(1)">
+                  <div class="content title-text proj-text">
+                      <h2>Autonomous Claw</h2>
+                      <p>This sheet metal claw is designed to detect and pick up various diffferent objects using a manual pulley to move the claw vertically</p>
+                  </div>
                 </div>
+              
+              </div>
+              
+              <div class="title-py-4" style="text-align: center;">
+                <h4 class="title-text sub-text">Auto-Claw</h4>
+              </div>
             </div>
+          </div>
 
-            <!--Interface for start/stop record-->>
-            <div class="button2"></div>
+          <div class="col-lg-4 col-md-6 col-sm-12 element-item electrical complete">
+            <div class="our-project">
+              <div class="proj-icon">
+                <img src="./img/projects/linefollowbot.png" class="proj-img">
+                
+                <div class="contentBx" style="margin-top: -130%;">
+                  <div class="content title-text proj-text">
+                      <h2>Line Following Robot</h2>
+                      <p>This three wheeled robot uses infrared sensors to detect and follow a black line</p>
+                  </div>
+                </div>
+              </div>
+              <div class="title-py-4" style="text-align: center;">
+                <h4 class="title-text sub-text">Following Robot</h4>
+              </div>
+            </div>
+          </div>
 
-            <!--Interface for current mode toggle-->>
-            <div class="button3"></div>
+          <div class="col-lg-4 col-md-6 col-sm-12 element-item software complete">
+            <div class="our-project">
+              <div class="proj-icon">
+                <img src="./img/projects/synthglove.png"  class="proj-img">
+                
+                <div class="contentBx" style="margin-top: -110%;">
+                  <div class="content title-text proj-text">
+                      <h2>Synthesizer Glove</h2>
+                      <p>This glove using flex sensors and an IMU allows the user to use our custom UI to make beats and tones</p>
+                  </div>
+                </div>
+              </div>
+              <div class="title-py-4" style="text-align: center;">
+                <h4 class="title-text sub-text">SynthGlove</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 element-item software ongoing">
+            <div class="our-project">
+              <div class="proj-icon">
+                <img src="./img/projects/website.PNG" class="proj-img">
+                <div class="contentBx" style="margin-top: -72%;">
+                  <div class="content title-text proj-text">
+                      <h2>Project Portfolio</h2>
+                      <p>HTML, CSS and Javascript based website to display personal projects</p>
+                  </div>
+                </div>
+              </div>
+              <div class="title-py-4" style="text-align: center;">
+                <h4 class="title-text sub-text">Project Portfolio</h4>
+              </div>
+            </div>
+          </div>
+
         </div>
-            <!--Table to display track information-->
-            <table class="playStop">
-                <!--Top row displays track names-->
-                <tr class="playName">
-                    <td class="playName">Buffer</td>
-                    <td class="playName">Kick</td>
-                    <td class="playName">Snare</td>
-                    <td class="playName">Synth 1</td>
-                    <td class="playName">Synth 2</td>
-                    <td class="playName">Synth 3</td>
-                    <td class="playName">Synth 4</td>
-                    <td class="playName">Synth 5</td>
-                    <td class="playName">Osc 1</td>
-                    <td class="playName">Osc 2</td>
-                </tr>
-                <!--Middle row lights up when track is active (not being edited)-->
-                <tr class="playLight">
-                    <td class="playLight"><div class="playLight" id="playLight0"></div></td>
-                    <td class="playLight"><div class="playLight" id="playLight1"></div></td>
-                    <td class="playLight"><div class="playLight" id="playLight2"></div></td>
-                    <td class="playLight"><div class="playLight" id="playLight3"></div></td>
-                    <td class="playLight"><div class="playLight" id="playLight4"></div></td>
-                    <td class="playLight"><div class="playLight" id="playLight5"></div></td>
-                    <td class="playLight"><div class="playLight" id="playLight6"></div></td>
-                    <td class="playLight"><div class="playLight" id="playLight7"></div></td>
-                    <td class="playLight"><div class="playLight" id="playLight8"></div></td>
-                    <td class="playLight"><div class="playLight" id="playLight9"></div></td>
-                </tr>
-                <!--Bottom row has bars displaying current volume-->
-                <tr class="playVol">
-                    <td class="playVol"></td>
-                    <td class="playVol"><div class="playVol" id="playVol1"><div class="playVolInner" id="playVolInner1"></div></div></td>
-                    <td class="playVol"><div class="playVol" id="playVol2"><div class="playVolInner" id="playVolInner2"></div></div></td>
-                    <td class="playVol"><div class="playVol" id="playVol3"><div class="playVolInner" id="playVolInner3"></div></div></td>
-                    <td class="playVol"><div class="playVol" id="playVol4"><div class="playVolInner" id="playVolInner4"></div></div></td>
-                    <td class="playVol"><div class="playVol" id="playVol5"><div class="playVolInner" id="playVolInner5"></div></div></td>
-                    <td class="playVol"><div class="playVol" id="playVol6"><div class="playVolInner" id="playVolInner6"></div></div></td>
-                    <td class="playVol"><div class="playVol" id="playVol7"><div class="playVolInner" id="playVolInner7"></div></div></td>
-                    <td class="playVol"><div class="playVol" id="playVol8"><div class="playVolInner" id="playVolInner8"></div></div></td>
-                    <td class="playVol"><div class="playVol" id="playVol9"><div class="playVolInner" id="playVolInner9"></div></div></td>
-                </tr>
-            </table>
+
+      </div>
+    </section>
 
 
-        <!--Inputs to simulate flex sensors, remove later?-->
-        <input type="range" class="slider1" id="thumb" min="1" max="100" value="1" step="1" oninput="setFlex(thumb, value)">
-        <input type="range" class="slider2" id="pointer" min="1" max="100" value="1" step="1" oninput="setFlex(pointer, value)">
-        <input type="range" class="slider3" id="middle" min="0" max="100" value="0" step="1" oninput="setFlex(middle, value)">
 
-        <!--Button to activate oscillator-->
-        <button class="notePress" onclick="playTrack()">Play/Stop</button>
-        <button class="notePress3" onclick="playSound()">globplay</button>
-        <button class="ChangeDown" onclick="playDrum()">LastTrack</button>
-        <button class="notePress2" onclick="changeTrack()">ChangeTrack</button>
-    </span>
+
+
+
+
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    </main>
+  
+    <!-- jquery js file-->
+    <script src="./js/jquery.3.4.1.js"></script>
+
+    <!-- Bootstrap js file-->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./vendor/isotope/isotope.min.js"></script>
+
+    <!--Custom Js file-->
+    <script src="./js/main.js"></script>
+  
+
+    <!-- using Bootstrap, Fontawesome, Google fonts and 
+        https://www.youtube.com/watch?v=dgKSqz3it50&list=LL&index=1&t=444s for tutorial-->
+  
+
 </body>
-</html>
+</hteml>
